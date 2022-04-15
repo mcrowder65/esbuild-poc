@@ -26,7 +26,16 @@ if (process.env.NODE_ENV === "test") {
     jest: (config) => {
       config.setupFilesAfterEnv = ["<rootDir>/test/setup-tests.js"]
       config.modulePaths = ["."]
-
+      config.transform["^.+\\.(js|jsx|mjs|cjs|ts|tsx)$"] = [
+        "esbuild-jest",
+        {
+          sourcemap: true,
+          loaders: {
+            ".js": "jsx",
+            ".test.js": "jsx",
+          },
+        },
+      ]
       return config
     },
   }

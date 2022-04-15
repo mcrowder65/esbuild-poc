@@ -40,6 +40,8 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-loader": "8.2.3",
     "customize-cra": "1.0.0",
+    "esbuild": "^0.14.36",
+    "esbuild-jest": "^0.5.0",
     "eslint-config-mcrowder65": "4.0.1",
     "http-proxy-middleware": "^2.0.1",
     "jest-axe": "5.0.1",
